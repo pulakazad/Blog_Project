@@ -1,9 +1,9 @@
 # Blog_Project
-Simply Blogging Project
+
+# Simply Blogging Project
 
 
-DESCRIPTION
-
+# DESCRIPTION
 As a Full Stack Developer, you have to develop a blog for the company where people can post articles and customers can benefit from the content.
 
 Background of the problem statement:

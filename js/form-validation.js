@@ -42,7 +42,7 @@ function validateForm() {
     if (contact == "") {
         printErr("contactErr", "Please enter your mobile number");
     } else {
-        // Regular expression for basic email validation
+        // Regular expression for phone number validation
         var regex = /^(\+\d{1,3}[- ]?)?\d{10}$/;
         if (regex.test(contact) === false) {
             printErr("contactErr", "Please enter a valid mobile number");

@@ -6,8 +6,6 @@ function displayBlogForm() {
     document.getElementById('addBlogForm').style.display = "block"
     document.getElementById('titleInput').value = "";
     document.getElementById('bodyInput').value = "";
-
-
 }
 
 function hideBlogForm() {
@@ -27,7 +25,7 @@ function newBlog() {
     // document.getElementById('bodyInput').value = "";
 
 
-    // Validate title
+    // Validate title and text
     if (title == "" || text == "") {
         if (title == "") {
             printError("titleErr", "Please enter a title");

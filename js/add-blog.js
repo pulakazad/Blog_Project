@@ -1,8 +1,15 @@
+function printError(error, msg) {
+    
+}
+
 function displayBlogForm() {
     document.getElementById('addBlogForm').style.display = "block"
 }
 
 function hideBlogForm() {
+    document.getElementById('titleInput').value = "";    
+    document.getElementById('bodyInput').value = "";
+
     document.getElementById('addBlogForm').style.display = "none";
 }
 
@@ -10,9 +17,12 @@ function newBlog() {
 
     var title = document.getElementById('titleInput').value;
     document.getElementById('titleInput').value = "";
-    
+
     var text = document.getElementById('bodyInput').value;
     document.getElementById('bodyInput').value = "";
+
+
+
 
     //create rowDiv
     var rowDiv = document.createElement('div');
@@ -45,7 +55,7 @@ function newBlog() {
     paragraph.innerHTML = text;
     cardBodyDiv.appendChild(paragraph);
 
-
+    //adding all the components to the main rowDiv
     cardHeaderDiv.appendChild(titleH4);
     cardDiv.appendChild(cardHeaderDiv);
     cardDiv.appendChild(cardBodyDiv);

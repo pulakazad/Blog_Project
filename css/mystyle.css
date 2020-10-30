@@ -18,3 +18,9 @@ html {
   .card-deck .card {
     min-width: 220px;
   }
+
+
+  .card-form .card {
+    min-width: 420px;
+    max-width: 48rem;
+  }

@@ -72,64 +72,22 @@
         </div>
     </nav>
 
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <div class="container pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h1 class="display-4">Blogs</h1>
         <p class="lead">Learn more about the different types of blogs...</p>
-    </div>
-    <!-- 
-    <div class="container">
-        <div class="row">
-            <div class="col"></div>
-            <div class="card-form mb-6 text-center col align-self-center">
-                <div class="card mb-4 shadow-lg" style="width: 36rem;">
-                    <div class="card-header">
-                        <h4 style="text-align: left;" class="my-0 font-weight-normal">Reach out to us!</h4>
-                    </div>
-                    <div class="card-body">
-                        <form name="contactForm" onsubmit="return validateForm()" method="post">
-                            <div class="form-group row mx-3 pb-1">
-                                <label for="nameInput">Name</label>
-                                <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
-                                <div class="error" id="nameErr"></div>
-                            </div>
-                            <div class="form-group row mx-3 pb-1">
-                                <label for="emailInput">Email Address</label>
-                                <input type="text" class="form-control" id="emailInput" placeholder="Enter email">
-                                <div class="error" id="emailErr"></div>
-                            </div>
-                            <div class="form-group row mx-3 pb-1">
-                                <label for="contactInput">Contact Number</label>
-                                <input type="text" class="form-control" id="contactInput" placeholder="Enter contact number">
-                                <div class="error" id="contactErr"></div>
-                            </div>
-                            <div class="form-group row mx-3 pb-1">
-                                <label for="textInput">Message</label>
-                                <textarea class="form-control" id="textInput" rows="5"></textarea>
-                                <div class="error" id="messageErr"></div>
-                            </div>
-                            <button type="submit" class="btn btn-secondary" value="submit">Submit</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col"></div>
-        </div>
-    </div> -->
-
-    <div class="container">
         <div class="row">
             <div class="col text-center pb-3">
                 <button onclick="displayBlogForm()" class="btn btn-secondary">Add Blog</button>
             </div>
         </div>
         <div id="addBlogForm" style="display: none;" class="row">
-            <div class="card-deck mb-6 text-center align-self-center">
-                <div class="card mb-4 shadow-lg" style="width: 36rem;">
+            <div class="card-deck ">
+                <div class="card shadow-lg" style="width: 36rem;">
                     <div class="card-header">
                         <h4 style="text-align: left;" class="my-0 font-weight-normal">Create a Blog!</h4>
                     </div>
                     <div class="card-body">
-                        <form name="newBlogForm" onsubmit="return newBlog()" method="post">
+                        <div name="newBlogForm">
                             <div class="form-group row mx-3 pb-1">
                                 <label for="titleInput">Title</label>
                                 <input type="text" class="form-control" id="titleInput" placeholder="Enter the blog title">
@@ -140,12 +98,16 @@
                                 <textarea class="form-control" id="bodyInput" rows="10"></textarea>
                                 <div class="error" id="messageErr"></div>
                             </div>
-                            <button type="submit" class="btn btn-outline-success" value="submit">Submit</button>
-                        </form>
+                            <button onclick="hideBlogForm()" class="btn btn-outline-danger">Cancel</button>
+                            <button onclick="newBlog()" class="btn btn-outline-success" value="submit">Submit</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div id = "blogContainer" class="container">
         <div class="row">
             <div class="card-deck mb-6 text-center">
                 <div class="card mb-4 shadow-sm">
